@@ -14,7 +14,7 @@ export default function Home() {
 
   const [bodyCopy, setBodyCopy] = useState('')
   const [stitchStyle, setStitchStyle] = useState('cross')
-  const [font, setFont] = useState('lobsterSmall')
+  const [font, setFont] = useState('stitchSansSmall')
 
   return ( <>
 
@@ -56,7 +56,7 @@ export default function Home() {
           <Form.Group controlId="font">
             <Form.Label>Font</Form.Label>
             <Form.Select>
-              <option value="lobsterSmall">Lobster, Small</option>
+              <option value="stitchSansSmall">Lobster, Small</option>
               <option value="stitchSansSmall">Stitch Sans, Small</option>
             </Form.Select>
           </Form.Group>
@@ -70,7 +70,7 @@ export default function Home() {
         <div className={ styles.output }>
           { bodyCopy.split('').map( ( character ) => (
           <>
-            <Character character={ character } font={ lobsterSmall } />
+            <Character character={ character } font={ stitchSansSmall } />
           </>
           ) ) }
         </div>
