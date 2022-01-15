@@ -6,8 +6,8 @@ export default function Stitches({
 }) {
   return !! stitches && (
     <div className={ styles.stitches } style={{ width: `${width}em` }}>
-      { stitches.map( stitch => (
-        <Stitch { ...stitch } />
+      { stitches.map( ( stitch, key ) => (
+        <Stitch key={ key } { ...stitch } />
       ) ) }
     </div>
   )

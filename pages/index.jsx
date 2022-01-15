@@ -19,7 +19,7 @@ export default function Home() {
   return ( <>
 
     <Head>
-      <title>Stitchin'</title>
+      <title>Stitchin&apos;</title>
       <meta name="description" content="Let's see if we can make this work.." />
       <link rel="icon" href="/favicon.ico" />
     </Head>
