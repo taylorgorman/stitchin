@@ -1,0 +1,42 @@
+.stitches
+  line-height: .6
+  box-shadow: 0px 0px 0px 1px #ddd
+  display: inline-block
+  vertical-align: top
+  font-size: .5em
+
+.stitch
+  display: inline-block
+  width: 1em
+  height: 1em
+  position: relative
+  border: solid .1em #ddd
+
+  &.square
+    background-color: currentColor
+
+  &.cross
+    $thickness: 45%
+    $hypotenuse: 140%
+
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      z-index: 1
+      background-color: currentColor
+      width: $hypotenuse + $thickness * .5
+      height: $thickness
+      border-radius: 40%
+      top: 0
+
+    &::before
+      left: 0
+      transform: rotate( 45deg )
+      transform-origin: $thickness * .45 0
+
+    &::after
+      right: 0
+      transform: rotate( -45deg )
+      transform-origin: 100% - $thickness * .45 0
